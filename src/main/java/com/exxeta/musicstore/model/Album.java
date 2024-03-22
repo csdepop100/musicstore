@@ -10,6 +10,6 @@ public class Album {
     private Long pkId;
     private String name;
     private String artist;
-    private LocalDateTime release;
+    private LocalDateTime releaseDate;
     private List<Review> reviews;
 }
