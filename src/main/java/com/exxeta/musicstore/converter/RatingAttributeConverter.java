@@ -3,7 +3,9 @@ package com.exxeta.musicstore.converter;
 import com.exxeta.musicstore.model.Rating;
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
+import org.springframework.stereotype.Component;
 
+@Component
 @Converter
 public class RatingAttributeConverter implements AttributeConverter<Rating, Integer> {
  
