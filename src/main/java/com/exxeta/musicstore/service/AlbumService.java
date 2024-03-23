@@ -4,6 +4,7 @@ import com.exxeta.musicstore.model.Album;
 import com.exxeta.musicstore.repository.AlbumRepository;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -15,6 +16,7 @@ public class AlbumService {
     }
 
     public List<Album> getAllAlbums() {
-        return albumRepository.findAll();
+        var results = albumRepository.findAll();
+        return new ArrayList<>(results);
     }
 }
