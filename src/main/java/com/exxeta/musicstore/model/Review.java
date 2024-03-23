@@ -1,7 +1,10 @@
 package com.exxeta.musicstore.model;
 
 import com.exxeta.musicstore.converter.RatingAttributeConverter;
-import jakarta.persistence.*;
+import jakarta.persistence.Convert;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "album_reviews")

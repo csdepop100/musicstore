@@ -29,14 +29,14 @@ public class AlbumRestController {
     @DeleteMapping("/{id}")
     public ResponseEntity<String> deleteAlbumById(@PathVariable("id") Long id) {
         var existingAlbum = albumService.findById(id);
-        if(existingAlbum.isPresent()) {
+        if (existingAlbum.isPresent()) {
             albumService.delete(existingAlbum.get());
             return ResponseEntity.ok().build();
         }
         return ResponseEntity.notFound().build();
     }
 
-    @ResponseStatus(value = HttpStatus.FORBIDDEN, reason="This is one of our favourites")
+    @ResponseStatus(value = HttpStatus.FORBIDDEN, reason = "This is one of our favourites")
     @ExceptionHandler(NeverDeleteFavouritesException.class)
     public void deletionConflict() {
         // nothing to do

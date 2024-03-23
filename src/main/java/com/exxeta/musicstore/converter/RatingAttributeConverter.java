@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Converter
 public class RatingAttributeConverter implements AttributeConverter<Rating, Integer> {
- 
+
     @Override
     public Integer convertToDatabaseColumn(Rating attribute) {
         if (attribute == null)
@@ -22,7 +22,7 @@ public class RatingAttributeConverter implements AttributeConverter<Rating, Inte
             case FIVE -> 5;
         };
     }
- 
+
     @Override
     public Rating convertToEntityAttribute(Integer dbData) {
         if (dbData == null)
@@ -37,5 +37,5 @@ public class RatingAttributeConverter implements AttributeConverter<Rating, Inte
             default -> throw new IllegalArgumentException(dbData + " not supported.");
         };
     }
- 
+
 }
