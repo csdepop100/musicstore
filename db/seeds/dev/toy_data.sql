@@ -27,3 +27,5 @@ INSERT INTO musicstore.album_reviews (pkId, user, rating, comment, album)
 VALUES (10, 'LastUser', 4, null, 1);
 INSERT INTO musicstore.album_reviews (pkId, user, rating, comment, album)
 VALUES (11, 'OneForGoodMeasure', 5, null, 1);
+INSERT INTO musicstore.album_reviews (pkId, user, rating, comment, album)
+VALUES (12, 'DeleteMePlease', 5, null, 2);

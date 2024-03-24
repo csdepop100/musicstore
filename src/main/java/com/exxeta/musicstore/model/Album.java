@@ -15,14 +15,18 @@ public class Album {
     private String artist;
     @Column(name = "release_date")
     private LocalDateTime releaseDate;
-    @OneToMany(targetEntity = Review.class)
+    @OneToMany(targetEntity = Review.class, cascade = CascadeType.ALL)
     @JoinColumn(name = "album")
     private Set<Review> reviews;
 
     public Album() {
     }
 
-    public Album(Long pkId, String name, String artist, LocalDateTime releaseDate, Set<Review> reviews) {
+    public Album(Long pkId,
+                 String name,
+                 String artist,
+                 LocalDateTime releaseDate,
+                 Set<Review> reviews) {
         this.id = pkId;
         this.name = name;
         this.artist = artist;

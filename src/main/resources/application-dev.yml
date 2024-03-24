@@ -4,8 +4,16 @@ spring:
     username: benutzer
     password: asdf
     driver-class-name: com.mysql.cj.jdbc.Driver
-  main:
-    banner-mode: off
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        hbm2ddl:
+          auto: update
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
 logging:
   level:

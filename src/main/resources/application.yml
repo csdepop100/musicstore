@@ -1,16 +1,6 @@
 spring:
   application:
     name: musicstore
-  jpa:
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        hbm2ddl:
-          auto: update
-    hibernate:
-      ddl-auto: update
-      naming:
-        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
 
   main:
     allow-bean-definition-overriding: true
